@@ -1,0 +1,4 @@
+jieba==0.42.1
+pywin32==300
+selenium==3.141.0
+urllib3==1.26.4
