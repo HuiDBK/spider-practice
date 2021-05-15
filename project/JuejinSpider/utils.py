@@ -12,12 +12,15 @@ import win32print
 
 def make_file(file_path):
     """
-    创建文件, 如果文件存在则跳过
+    创建文件, 如果文件存在返回True, 反之False
     :return:
     """
+    is_exists = True
     if not os.path.exists(file_path):
         file = open(file_path, mode='w', encoding='utf-8')
         file.close()
+        is_exists = False
+    return is_exists
 
 
 def get_real_screen():
